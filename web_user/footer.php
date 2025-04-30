@@ -59,7 +59,7 @@
             <div class="container">
                 <div class="row">
                     <!-- Start Single Widget  -->
-                    <div class="col-lg-3 col-sm-6">
+                    <div class="col-lg-4 col-sm-6">
                         <div class="axil-footer-widget">
                             <h5 class="widget-title">Address</h5>
                             <!-- <div class="logo mb--30">
@@ -68,15 +68,12 @@
                             </a>
                         </div> -->
                             <div class="inner">
-                                <p>Hang Thuyen Street, <br>
-                                    neighborhood 6 P, Thu Duc City - HCM, <br>
-                                    Viet Nam.
+                                <p>Maaidi str., <br>
+                                    str.9 maadi , <br>
                                 </p>
                                 <ul class="support-list-item">
-                                    <li><a href="20522000@gm.uit.edu.vn"><i
-                                                class="fal fa-envelope-open"></i>20522000@gm.uit.edu.vn</a></li>
-                                    <li><a href="tel:(+84)32888525"><i class="fal fa-phone-alt"></i>
-                                            (+84)342-888-525</a></li>
+                                    <li><a href="nourmamdouh54@gmail.com"><i
+                                                class="fal fa-envelope-open"></i>nourmamdouh54@gmail.com</a></li>
                                     <!-- <li><i class="fal fa-map-marker-alt"></i> 685 Market Street,  <br> Las Vegas, LA 95820, <br> United States.</li> -->
                                 </ul>
                             </div>
@@ -84,7 +81,7 @@
                     </div>
                     <!-- End Single Widget  -->
                     <!-- Start Single Widget  -->
-                    <div class="col-lg-3 col-sm-6">
+                    <div class="col-lg-4 col-sm-6">
                         <div class="axil-footer-widget">
                             <h5 class="widget-title">Account</h5>
                             <div class="inner">
@@ -99,7 +96,7 @@
                     </div>
                     <!-- End Single Widget  -->
                     <!-- Start Single Widget  -->
-                    <div class="col-lg-3 col-sm-6">
+                    <div class="col-lg-4 col-sm-6">
                         <div class="axil-footer-widget">
                             <h5 class="widget-title">Quick Link</h5>
                             <div class="inner">
@@ -114,19 +111,7 @@
                     </div>
                     <!-- End Single Widget  -->
                     <!-- Start Single Widget  -->
-                    <div class="col-lg-3 col-sm-6">
-                        <div class="axil-footer-widget">
-                            <h5 class="widget-title">Member</h5>
-                            <div class="inner">
-                                <ul>
-                                    <li><a>Nguyen Nhat Thuong - 20522000</a></li>
-                                    <li><a>Le Quang Hoa - 20521331</a></li>
-                                    <li><a>Kieu Xuan Dieu Huong - 20521381</a></li>
-                                    <li><a>Nguyen Bao Lam - 20521515</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+                
                     <!-- End Single Widget  -->
                 </div>
             </div>

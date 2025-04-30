@@ -53,7 +53,7 @@
                             <div class="single-product-content">
                                 <div class="inner">
                                     <h2 class="product-title">'.$detail_product[0]["product_name"].'</h2>
-                                    <span class="price-amount">'.number_format($detail_product[0]["product_prices"]).'đ</span>';
+                                    <span class="price-amount">'.number_format($detail_product[0]["product_prices"]).'EGP</span>';
 
                                     if ($detail_product[0]["quantity"] == 0) {
                                         echo '

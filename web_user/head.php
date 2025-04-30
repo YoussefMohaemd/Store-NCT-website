@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>Kings Man</title>
+    <title>Stylish Store</title>
     <meta name="robots" content="noindex, follow" />
     <meta name="description" content="" />
     <meta

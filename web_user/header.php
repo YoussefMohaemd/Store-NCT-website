@@ -26,7 +26,7 @@ $(document).ready(function() {
             <div class="header-navbar">
                 <div class="header-brand">
                     <a href="fashionApp.php?act=home">
-                        <img style="  width: 231px; height: 52px;" src="../assets/images/logo/logo5.png"
+                        <img style="  width: 231px; height: 52px;" src="../assets/images/logo/logo.png"
                             alt="Site Logo" />
                     </a>
                 </div>
@@ -66,40 +66,7 @@ $(document).ready(function() {
                 </div>
                 <div class="header-action">
                     <ul class="action-list">
-                        <li class="axil-search d-xl-block d-none">
-                            <input type="search" class="placeholder product-search-input" name="search2" id="search2"
-                                value="" maxlength="128" placeholder="What are you looking for?" autocomplete="off" />
-                            <button type="submit" class="icon wooc-btn-search">
-                                <i class="flaticon-magnifying-glass"></i>
-                            </button>
-                        </li>
-                        <li class="axil-search d-xl-none d-block">
-                            <a href="javascript:void(0)" class="header-search-icon" title="Search">
-                                <i class="flaticon-magnifying-glass"></i>
-                            </a>
-                        </li>
-                        <!-- search nav -->
-                        <div class="header-search-modal" id="header-search-modal">
-                            <button class="card-close sidebar-close"><i class="fas fa-times"></i></button>
-                            <div class="header-search-wrap">
-                                <div class="card-header">
-                                    <form action="test_search.php">
-                                        <div class="input-group">
-                                            <input type="text" id="searchInput" class="form-control"
-                                                placeholder="Write Something....">
-                                            <button type="submit" class="axil-btn btn-bg-primary"><i
-                                                    class="far fa-search"></i></button>
-                                        </div>
-                                    </form>
-                                    <div id="searchResults"></div>
-                                </div>
-                                <div class="card-body">
-                                    <div id="searchResults">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Header Search Modal End -->
+                        
                         <!-- end search -->
                         <li class="shopping-cart">
                             <a id="cart_click" href="#" class="cart-dropdown-btn">
@@ -108,14 +75,11 @@ $(document).ready(function() {
                             </a>
                         </li>
                         <script>
-                        // Cập nhật giá trị sau mỗi 5 giây (5000 milliseconds)
                         setInterval(function() {
-                            // Gửi yêu cầu AJAX để lấy số lượng từ session
                             var xhr = new XMLHttpRequest();
                             xhr.open('GET', 'get_cart_count.php', true);
                             xhr.onreadystatechange = function() {
                                 if (xhr.readyState === 4 && xhr.status === 200) {
-                                    // Cập nhật giá trị trong thẻ span
                                     document.getElementById('cart-count').textContent = xhr
                                         .responseText;
                                 }
@@ -142,10 +106,7 @@ $(document).ready(function() {
                         if(isset($_SESSION['username'])&&($_SESSION['username']!=""))
                         {
                           echo '
-                          <div class="login-btn">
-                          <li><a class="axil-btn btn-bg-primary" style="text-align: center;" href="fashionApp.php?act=account_user">My account</a></li>
-                          </div>
-                          </ul>
+
                           <div class="login-btn">
                             <a href="fashionApp.php?act=logout" class="axil-btn btn-bg-primary">Log out</a>
                           </div>

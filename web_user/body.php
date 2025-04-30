@@ -40,10 +40,10 @@
                                     <div class="product-content">
                                         <div class="inner">
                                             <h5 class="title">
-                                              <a href="fashionApp.php?act=detail_product&id='.$pd['id_product'].'">'.$pd['product_name'].'</a>
+                                            <a href="fashionApp.php?act=detail_product&id='.$pd['id_product'].'">'.$pd['product_name'].'</a>
                                             </h5>
                                             <div class="product-price-variant">
-                                                <span class="price current-price">'.number_format($pd['product_prices']).'đ</span>
+                                                <span class="price current-price">'.number_format($pd['product_prices']).'EGP</span>
                                             </div>
                                             <ul class="cart-action">
                                                 <li class="select-option">
@@ -102,7 +102,7 @@
                             <div class="product-content">
                                 <div class="inner">
                                     <div class="product-price-variant">
-                                    <span class="price current-price">'.number_format($pd['product_prices']).'đ</span>
+                                    <span class="price current-price">'.number_format($pd['product_prices']).'EGP</span>
                                     </div>
                                         <h5 style="text-align:center" class="title">
                                             <a href="fashionApp.php?act=detail_product&id='.$pd['id_product'].'"
@@ -199,7 +199,7 @@
                                                     ></a>
                                                 </h5>
                                                 <div class="product-price-variant">
-                                                    <span class="price current-price">'.number_format($result['product_prices']).'đ</span>
+                                                    <span class="price current-price">'.number_format($result['product_prices']).'EGP</span>
                                                 </div>
                                             </div>
                                         </div>

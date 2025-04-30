@@ -67,7 +67,7 @@
                                                                 <tr class="order-product">
                                                                     <td>'.$cart['name_pro'].' <span class="quantity">x'.$cart['quantity'].'</span></td>
                                                                     <td>'.$cart['size'].'</td>
-                                                                    <td style="text-align:left;">'.number_format($cart['prices']).'đ</td>
+                                                                    <td style="text-align:left;">'.number_format($cart['prices']).'EGP</td>
                                                                 </tr>
                                                             ';
                                                             }
@@ -85,14 +85,14 @@
                                                         echo '
                                                         <tr class="order-subtotal">
                                                         <td>Subtotal</td>
-                                                        <td>'.number_format($total).'đ</td>
+                                                        <td>'.number_format($total).'EGP</td>
                                                         </tr>
                                                         <tr>
                                                             <td colspan="2">
                                                                 <div class="order-shipping" >
                                                                     <div class="shipping-amount">
                                                                         <span class="title">Shipping Method</span>
-                                                                        <span class="amount">0.00đ</span>
+                                                                        <span class="amount">0  EGP</span>
                                                                     </div>
                                                                 </div>
                                                                 <br>
@@ -101,10 +101,6 @@
                                                                     <label for="radio1">Free Shippping</label>
                                                                 </div>
                                                                 <br>
-                                                                <div class="input-group">
-                                                                    <input type="radio" id="radio2" name="shipping">
-                                                                    <label for="radio2">Local</label>
-                                                                </div>
                                                             </td>
                                                         </tr>
                                                         ';
@@ -113,12 +109,12 @@
                                                     echo'
                                                                             <tr class="order-total">
                                                                                 <td>Total</td>
-                                                                                <td class="order-total-amount">'.number_format($total).'đ</td>
+                                                                                <td class="order-total-amount">'.number_format($total).'EGP</td>
                                                                             </tr>
                                                                         </tbody>
                                                                     </table>
                                                                 </div>
-                                                                <input value="Finished" type="submit" name="submit"  class="axil-btn btn-bg-primary checkout-btn"></input>
+                                                                <input value="Finished" type="submit" name="submit"  class="axil-btn btn-bg-primary checkout-btn" ></input>
                                                             </div>
                                                         </div>
                                                     ';

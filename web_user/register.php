@@ -32,12 +32,11 @@ include 'head.php';
             </div>
             <!-- 4 -->
             <div class="form-group">
-                <label>Sex<span class="redline" ;> *</span></label>
+                <label>Gender<span class="redline" ;> *</span></label>
                 <select style="height: 50px;" name="sex_c" id="">
-                    <option value="0">Choose Sex</option>
+                    <option value="0">Choose Gender</option>
                     <option value="1">Male</option>
                     <option value="2">Female</option>
-                    <option value="3">Other</option>
                 </select>
             </div>
             <!-- 5 -->

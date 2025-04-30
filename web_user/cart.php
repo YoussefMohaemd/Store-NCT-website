@@ -43,9 +43,9 @@
                                         <td style="width: 80px; height: 80px;" class="product-thumbnail fix_acount_pic"><a href="fashionApp.php?act=detail_product&id='.$item[0].'"><img src="../uploads/'.$item[2].'" alt="Digital Product"></a></td>
                                         <td class="product-title"><a href="fashionApp.php?act=detail_product&id='.$item[0].'">'.$item[1].'</a></td>
                                         <td class="product-price" data-title="Price"><span class="currency-symbol">'.$item[5].'</span></td>
-                                        <td class="product-price" data-title="Price"><span class="currency-symbol">'.number_format($item[3]).'đ</span></td>
+                                        <td class="product-price" data-title="Price"><span class="currency-symbol">'.number_format($item[3]).'EGP</span></td>
                                         <td class="product-price" data-title="quantity"><span class="currency-symbol">'.$item[4].'</span></td>
-                                        <td class="product-subtotal" data-title="Subtotal"><span class="currency-symbol">'.number_format($total).'đ</span></td>
+                                        <td class="product-subtotal" data-title="Subtotal"><span class="currency-symbol">'.number_format($total).'EGP</span></td>
                                     </tr>
                                     </tbody>
                                     ';
@@ -76,7 +76,7 @@
                                                             <tbody>
                                                                 <tr class="order-subtotal">
                                                                     <td>Subtotal</td>
-                                                                    <td>'.number_format($total_final).'đ</td>
+                                                                    <td>'.number_format($total_final).'EGP</td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>Shipping</td>
@@ -87,23 +87,12 @@
                                                                             <br>
                                                                             <label for="radio1">Free Shippping</label>
                                                                         </div>
-                                                                        <div class="input-group">
-                                                                        <input type="radio" id="radio2" name="shipping">
-                                                                        <label for="radio2">Local store: 00,000đ</label>
-                                                                        </div>
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
                                                                 <form id="check_cart_product_'.$i.'"action="fashionApp.php?act=checkout" method="POST">
                                                                     <td>Payment Method</td>
                                                                     <td>
-                                                                            <div class="single-payment">
-                                                                                <div class="input-group justify-content-between align-items-center">
-                                                                                    <input type="radio" id="radio6"  value="2" name="payment" checked>
-                                                                                    <label for="radio6">Momo</label>
-                                                                                    <img style="width: 110px; height: 40px;" src="../assets/images/others/momo3.png" alt="Paypal payment">
-                                                                                </div>
-                                                                            </div>
                                                                             <br>
                                                                             <div class="order-payment-method">
                                                                             <div class="single-payment">
@@ -115,13 +104,10 @@
                                                                         </div>
                                                                     </td>
                                                                 </tr>
-                                                                <tr class="order-tax">
-                                                                    <td>Tax</td>
-                                                                    <td>'.number_format($tax).'đ</td>
-                                                                </tr>
+                                                                
                                                                 <tr class="order-total">
                                                                     <td>Total</td>
-                                                                    <td class="order-total-amount">'.number_format($total_final + $tax).'đ</td>
+                                                                    <td class="order-total-amount">'.number_format($total_final).'EGP</td>
                                                                 </tr>
                                                             </tbody>
                                                         </table>
@@ -133,7 +119,7 @@
                                     </div>
                                 </div>
                             </div>
-                                <input type="hidden" value="'.($total_final + $tax).'" name="total_prices">
+                                <input type="hidden" value="'.($total_final).'" name="total_prices">
                             </form>
                             ';
                             }

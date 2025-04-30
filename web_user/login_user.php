@@ -7,7 +7,7 @@
     <div class="signin-header">
         <div class="row align-items-center">
             <div class="col-sm-4">
-                <a href="fashionApp.php" class="site-logo"><img src="../assets/images/logo/logo5.png" alt="logo"></a>
+                <a href="fashionApp.php" class="site-logo w-[200px]"><img src="../assets/images/logo/logo.png" alt="logo"></a>
             </div>
             <div class="col-sm-8">
                 <div class="singin-header-btn">

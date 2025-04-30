@@ -49,11 +49,11 @@ CREATE TABLE `tbl_cart` (
 --
 
 INSERT INTO `tbl_cart` (`id`, `id_order`, `id_pro`, `quantity`, `prices`, `size`, `name_pro`, `img_pro`) VALUES
-(201, 141, 90, 2, 27000000.00, 'L', 'Grey Vest', 'suit (6).png'),
-(202, 142, 90, 1, 27000000.00, 'L', 'Grey Vest', 'suit (6).png'),
-(203, 142, 91, 1, 27500000.00, 'XL', 'Black Vest', 'suit (2).png'),
-(204, 143, 95, 1, 20000000.00, 'L', 'Ken Vest', 'product-39.png'),
-(206, 145, 90, 1, 27000000.00, 'L', 'Grey Vest', 'suit (6).png');
+(201, 141, 90, 2, 2700, 'L', 'Grey Vest', 'suit (6).png'),
+(202, 142, 90, 1, 2700, 'L', 'Grey Vest', 'suit (6).png'),
+(203, 142, 91, 1, 2750, 'XL', 'Black Vest', 'suit (2).png'),
+(204, 143, 95, 1, 2000, 'L', 'Ken Vest', 'product-39.png'),
+(206, 145, 90, 1, 2700, 'L', 'Grey Vest', 'suit (6).png');
 
 -- --------------------------------------------------------
 
@@ -167,14 +167,14 @@ CREATE TABLE `tbl_product` (
 --
 
 INSERT INTO `tbl_product` (`id_product`, `product_name`, `quantity`, `product_img`, `product_prices`, `catalog_id`, `employee_entry`, `entry_date`, `sup_id`, `view`, `special`, `old_prices`, `description`, `size`) VALUES
-(90, 'Grey Vest', 148, 'suit (6).png', 27000000, 94, 1, '2023-06-08', 16, 1, 1, 27000000, 'A waistcoat has a full vertical opening in the front, which fastens with buttons or snaps. Both single-breasted and double-breasted waistcoats exist, regardless of the formality of dress, but single-breasted ones are more common. In a three piece suit, th', 'L'),
-(91, 'Black Vest', 149, 'suit (2).png', 27500000, 95, 1, '2023-06-08', 16, 1, 1, 27500000, 'A waistcoat has a full vertical opening in the front, which fastens with buttons or snaps. Both single-breasted and double-breasted waistcoats exist, regardless of the formality of dress, but single-breasted ones are more common. In a three piece suit, th', 'XL'),
-(92, 'Brown Vest', 273, 'product-41.png', 20000000, 96, 1, '2023-06-08', 16, 1, 1, 20000000, 'A waistcoat has a full vertical opening in the front, which fastens with buttons or snaps. Both single-breasted and double-breasted waistcoats exist, regardless of the formality of dress, but single-breasted ones are more common. In a three piece suit, th', 'XXL'),
-(93, 'Kings Vest', 10, 'suit (3).png', 55000000, 96, 1, '2023-06-08', 14, 1, 1, 55000000, 'A waistcoat has a full vertical opening in the front, which fastens with buttons or snaps. Both single-breasted and double-breasted waistcoats exist, regardless of the formality of dress, but single-breasted ones are more common. In a three piece suit, th', 'M'),
-(94, 'Supper Vest', 150, 'suit (5).png', 23000000, 95, 1, '2023-06-08', 14, 1, 1, 27500000, 'A waistcoat has a full vertical opening in the front, which fastens with buttons or snaps. Both single-breasted and double-breasted waistcoats exist, regardless of the formality of dress, but single-breasted ones are more common. In a three piece suit, th', 'L'),
-(95, 'Ken Vest', 122, 'product-39.png', 20000000, 94, 1, '2023-06-08', 14, 1, 1, 20000000, 'A waistcoat has a full vertical opening in the front, which fastens with buttons or snaps. Both single-breasted and double-breasted waistcoats exist, regardless of the formality of dress, but single-breasted ones are more common. In a three piece suit, th', 'L'),
-(96, 'Max Vest', 123, 'product-43.png', 27000000, 94, 1, '2023-06-08', 14, 1, 1, 27000000, 'A waistcoat has a full vertical opening in the front, which fastens with buttons or snaps. Both single-breasted and double-breasted waistcoats exist, regardless of the formality of dress, but single-breasted ones are more common. In a three piece suit, th', 'XXL'),
-(97, 'Break Vest', 123, 'suit (4).png', 27000000, 94, 1, '2023-06-08', 16, 1, 1, 27000000, 'A waistcoat has a full vertical opening in the front, which fastens with buttons or snaps. Both single-breasted and double-breasted waistcoats exist, regardless of the formality of dress, but single-breasted ones are more common. In a three piece suit, th', 'XXXL');
+(90, 'Grey Vest', 148, 'suit (6).png', 270, 94, 1, '2023-06-08', 16, 1, 1, 27000, 'A waistcoat has a full vertical opening in the front, which fastens with buttons or snaps. Both single-breasted and double-breasted waistcoats exist, regardless of the formality of dress, but single-breasted ones are more common. In a three piece suit, th', 'L'),
+(91, 'Black Vest', 149, 'suit (2).png', 275, 95, 1, '2023-06-08', 16, 1, 1, 27500, 'A waistcoat has a full vertical opening in the front, which fastens with buttons or snaps. Both single-breasted and double-breasted waistcoats exist, regardless of the formality of dress, but single-breasted ones are more common. In a three piece suit, th', 'XL'),
+(92, 'Brown Vest', 273, 'product-41.png', 200, 96, 1, '2023-06-08', 16, 1, 1, 2000, 'A waistcoat has a full vertical opening in the front, which fastens with buttons or snaps. Both single-breasted and double-breasted waistcoats exist, regardless of the formality of dress, but single-breasted ones are more common. In a three piece suit, th', 'XXL'),
+(93, 'Kings Vest', 10, 'suit (3).png', 550, 96, 1, '2023-06-08', 14, 1, 1, 5500, 'A waistcoat has a full vertical opening in the front, which fastens with buttons or snaps. Both single-breasted and double-breasted waistcoats exist, regardless of the formality of dress, but single-breasted ones are more common. In a three piece suit, th', 'M'),
+(94, 'Supper Vest', 150, 'suit (5).png', 230, 95, 1, '2023-06-08', 14, 1, 1, 275, 'A waistcoat has a full vertical opening in the front, which fastens with buttons or snaps. Both single-breasted and double-breasted waistcoats exist, regardless of the formality of dress, but single-breasted ones are more common. In a three piece suit, th', 'L'),
+(95, 'Ken Vest', 122, 'product-39.png', 200, 94, 1, '2023-06-08', 14, 1, 1, 2000, 'A waistcoat has a full vertical opening in the front, which fastens with buttons or snaps. Both single-breasted and double-breasted waistcoats exist, regardless of the formality of dress, but single-breasted ones are more common. In a three piece suit, th', 'L'),
+(96, 'Max Vest', 123, 'product-43.png', 2700, 94, 1, '2023-06-08', 14, 1, 1, 2700, 'A waistcoat has a full vertical opening in the front, which fastens with buttons or snaps. Both single-breasted and double-breasted waistcoats exist, regardless of the formality of dress, but single-breasted ones are more common. In a three piece suit, th', 'XXL'),
+(97, 'Break Vest', 123, 'suit (4).png', 2700, 94, 1, '2023-06-08', 16, 1, 1, 2700, 'A waistcoat has a full vertical opening in the front, which fastens with buttons or snaps. Both single-breasted and double-breasted waistcoats exist, regardless of the formality of dress, but single-breasted ones are more common. In a three piece suit, th', 'XXXL');
 
 -- --------------------------------------------------------
 
