@@ -84,5 +84,3 @@ include 'head.php';
         </form>
     </div>
 </div>
-</div>
-</div>

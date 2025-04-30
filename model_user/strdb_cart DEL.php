@@ -1,4 +1,5 @@
 <?php
+// storage cart controller (delete)
 function getall_srtcart(){
     $conn=connectdb();
     $stmt = $conn->prepare("SELECT * FROM tbl_storage");
