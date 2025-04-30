@@ -16,53 +16,7 @@
                 </div> -->
                     </div>
                 </div>
-                <div class="col-xl-6 col-lg-6">
-                    <div class="main-slider-large-thumb">
-                        <div class="slider-thumb-activation-two axil-slick-dots">
-                            <!-- start -->
-                            <?php
-                  $i =0;
-                  foreach($product_view as $pd){
-                    if($i<5)
-                    {
-                      if($pd['special'] == 1){
-                        echo'
-                        <div class="single-slide slick-slide">
-                            <div class="axil-product product-style-five">
-                                    <div class="thumbnail">
-                                        <a href="fashionApp.php?act=detail_product&id='.$pd['id_product'].'">
-                                            <img
-                                            src="../uploads/'.$pd['product_img'].'"
-                                            alt="Product Images"
-                                            />
-                                        </a>
-                                    </div>
-                                    <div class="product-content">
-                                        <div class="inner">
-                                            <h5 class="title">
-                                            <a href="fashionApp.php?act=detail_product&id='.$pd['id_product'].'">'.$pd['product_name'].'</a>
-                                            </h5>
-                                            <div class="product-price-variant">
-                                                <span class="price current-price">'.number_format($pd['product_prices']).'EGP</span>
-                                            </div>
-                                            <ul class="cart-action">
-                                                <li class="select-option">
-                                                    <a " href="fashionApp.php?act=detail_product&id='.$pd['id_product'].'">Buy Product</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                            </div>
-                        </div>
-                        ';
-                        $i++;
-                      }
-                    }
-                  }?>
-                            <!-- end -->
-                        </div>
-                    </div>
-                </div>
+                
             </div>
         </div>
     </div>
@@ -140,21 +94,7 @@
                                 Our New Products</span>
                             <h2 class="title">New Products</h2>
                         </div>
-                        <div class="isotope-button">
-                            <?php
-                    echo'
-                    <button data-filter="*" class="is-checked">
-                    <span class="filter-text">All</span>
-                    </button>';
-                    foreach($catalog_use as $catalog){
-                      echo'
-                      <button data-filter=".'.$catalog['id_catalog_k'].'" class="">
-                      <span class="filter-text">'.$catalog['catalog_name'].'</span>
-                      </button>
-                      ';
-                    }
-                  ?>
-                        </div>
+                        
                     </div>
                 </div>
                 <div class="row row--15 isotope-list">

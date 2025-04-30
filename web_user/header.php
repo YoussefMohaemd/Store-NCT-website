@@ -45,21 +45,11 @@ $(document).ready(function() {
                             <li>
                                 <a href="fashionApp.php?act=home">HOME</a>
                             </li>
-                            <li class="menu-item-has-children">
-                                <a href="#">CLOTHES</a>
-                                <ul class="axil-submenu">
-                                    <?php
-                        foreach($catalog_use as $catalog){
-                          if($catalog['display_ctl']==1){
-                            echo '
-                            <li><a href="fashionApp.php?act=product_catalog_user&id='.$catalog['id_catalog_k'].'">'.$catalog['catalog_name'].'</a></li>
-                          ';
-                          }
-                        }
-                      ?>
-                                </ul>
+                            <li>
+                                <a href="">CLOTHES</a>
+                               
                             </li>
-                            <li><a href="fashionApp.php?act=about">ABOUT</a></li>
+                            <li><a href="">ABOUT</a></li>
                         </ul>
                     </nav>
                     <!-- End Mainmanu Nav -->
@@ -67,32 +57,7 @@ $(document).ready(function() {
                 <div class="header-action">
                     <ul class="action-list">
                         
-                        <!-- end search -->
-                        <li class="shopping-cart">
-                            <a id="cart_click" href="#" class="cart-dropdown-btn">
-                                <span id="cart-count" class="cart-count"></span>
-                                <i class="flaticon-shopping-cart"></i>
-                            </a>
-                        </li>
-                        <script>
-                        setInterval(function() {
-                            var xhr = new XMLHttpRequest();
-                            xhr.open('GET', 'get_cart_count.php', true);
-                            xhr.onreadystatechange = function() {
-                                if (xhr.readyState === 4 && xhr.status === 200) {
-                                    document.getElementById('cart-count').textContent = xhr
-                                        .responseText;
-                                }
-                            };
-                            xhr.send();
-                        }, 200); // Thời gian cập nhật (2 giây)
-                        </script>
-                        <script>
-                        var input = document.getElementById('cart_click');
-                        input.onclick = function() {
-                            window.location.href = 'fashionApp.php?act=cart';
-                        };
-                        </script>
+                       
 
 
                         <li class="my-account">

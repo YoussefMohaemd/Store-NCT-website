@@ -121,7 +121,7 @@
 
                                             if ($detail_product[0]["quantity"] != 0) {
                                                 echo '
-                                                    <li class="add-to-cart"><a href="javascript:void(0);" onclick="submitForm('.$i.')" class="axil-btn btn-bg-primary">Add to Cart</a></li>
+                                                    <li class="add-to-cart"><a href="fashionApp.php?act=home" onclick="submitForm('.$i.')" class="axil-btn btn-bg-primary">Add to Cart</a></li>
                                                     <li class="wishlist"><a href="#" class="axil-btn wishlist-btn"><i class="far fa-heart"></i></a></li>
                                                 ';
                                             } else {
