@@ -1,8 +1,6 @@
 ﻿@import "https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&amp;family=Poppins:wght@400;500;600;700&amp;display=swap";
 :root {
-  /* --color-scrollbar: #ccc; 
-  --color-scrollbar-thumb: #888; 
-  --color-scrollbar-thumb-hover: #555;  */
+ 
   --color-primary: #3577f0;
   --light-primary: #8c71db;
   --color-secondary: #ff497c;
@@ -6567,7 +6565,7 @@ button.axil-btn.wishlist-btn:hover:before {
   scrollbar-width: thin;
   scrollbar-color: var(--color-scrollbar) var(--color-scrollbar-thumb);
 }
-/* addd */
+
 .header-search-modal .header-search-wrap::-webkit-scrollbar {
   width: 0px;
 }
@@ -6584,7 +6582,7 @@ button.axil-btn.wishlist-btn:hover:before {
 .header-search-modal .header-search-wrap::-webkit-scrollbar-thumb:hover {
   background-color: var(--color-scrollbar-thumb-hover);
 }
-/* end */
+
 @media only screen and (max-width: 991px) {
   .header-search-modal .header-search-wrap {
     width: 100%;
@@ -16234,7 +16232,7 @@ body.open .closeMask {
     margin-bottom: 100px;
   }
 }
-/*# sourceMappingURL=../maps/style.min.css.map */
+
 .conform-img{
   width: 300px;
   height: 373px;
@@ -16335,24 +16333,24 @@ body.open .closeMask {
 
 
 .element {
-  overflow: auto; /* Hiển thị thanh cuộn khi nội dung vượt quá kích thước của phần tử */
+  overflow: auto;
 }
 
-/* Thiết lập kiểu scrollbar */
+
 .element::-webkit-scrollbar {
-  width: 10px; /* Đặt chiều rộng của thanh cuộn */
+  width: 10px;
 }
 
-/* Thiết lập kiểu thanh cuộn */
+
 .element::-webkit-scrollbar-thumb {
-  background-color: #888; /* Màu nền của thanh cuộn */
-  border: 2px solid #fff; /* Viền của thanh cuộn */
-  border-radius: 5px; /* Đặt bo góc cho thanh cuộn */
+  background-color: #888;
+  border: 2px solid #fff;
+  border-radius: 5px;
 }
 
-/* Thiết lập kiểu nền của vùng thanh cuộn */
+
 .element::-webkit-scrollbar-track {
-  background-color: #f1f1f1; /* Màu nền của vùng thanh cuộn */
-  border: 1px solid #ddd; /* Viền của vùng thanh cuộn */
-  border-radius: 5px; /* Đặt bo góc cho vùng thanh cuộn */
+  background-color: #f1f1f1;
+  border: 1px solid #ddd;
+  border-radius: 5px;
 }

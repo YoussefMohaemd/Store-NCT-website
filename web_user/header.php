@@ -1,22 +1,3 @@
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script>
-$(document).ready(function() {
-    $("#searchInput").keyup(function() {
-        var query = $(this).val(); // Lấy từ khóa tìm kiếm từ input
-        $.ajax({
-            type: "POST",
-            url: "test_search.php",
-            data: {
-                query: query
-            },
-            success: function(data) {
-                $("#searchResults").html(data);
-            }
-        });
-    });
-});
-</script>
-
 <body class="sticky-header">
     <a href="#top" class="back-to-top" id="backto-top"><i class="fal fa-arrow-up"></i></a>
     <!-- Start Mainmenu Area  -->
