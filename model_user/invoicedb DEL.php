@@ -1,4 +1,6 @@
 <?php
+
+// Orders & Cart Management Controllers (delete)
     function getall_order(){
         $conn=connectdb();
         $stmt = $conn->prepare("SELECT * FROM tbl_order  ORDER BY due_date DESC");

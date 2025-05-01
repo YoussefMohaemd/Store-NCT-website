@@ -1,4 +1,5 @@
 <?php
+// in switch every commented case will be deleted in the future (after testing)
 session_start();
 ob_start();
 if (!isset($_SESSION['cart'])) {
@@ -33,12 +34,12 @@ if (isset($_GET['act'])) {
         if (isset($_SESSION['username'])) {
           unset($_SESSION['username']);
         }
-        if (isset($_SESSION['cart'])) {
+        // if (isset($_SESSION['cart'])) {
           // foreach ($_SESSION['cart'] as $key => $item) {
           //   insert_strcart($_SESSION['iduser'], $item[0]);
           // }
-          unset($_SESSION['cart']);
-        }
+        //   unset($_SESSION['cart']);
+        // }
         if (isset($_SESSION['iduser'])) {
           unset($_SESSION['iduser']);
         }
@@ -75,7 +76,7 @@ if (isset($_GET['act'])) {
     // show more info
     case 'account_user': {
         $client = getall_client_user();
-        $order = getall_order();
+        // $order = getall_order();
         include 'account_user.php';
         break;
       }
@@ -100,33 +101,33 @@ if (isset($_GET['act'])) {
         include 'body.php';
         break;
       }
-    case 'cart': {
-        include("cart.php");
-        break;
-      }
-    case 'clear_cart': {
-        if (isset($_SESSION['cart'])) {
-          unset($_SESSION['cart']);
-        }
-        include("cart.php");
-        break;
-      }
-    case 'removeProductSingle': {
-        if (isset($_GET['id'])) {
-          $productIdToDelete = $_GET['id']; // ID của sản phẩm muốn xoá
+    // case 'cart': {
+    //     include("cart.php");
+    //     break;
+    //   }
+    // case 'clear_cart': {
+    //     if (isset($_SESSION['cart'])) {
+    //       unset($_SESSION['cart']);
+    //     }
+    //     include("cart.php");
+    //     break;
+    //   }
+    // case 'removeProductSingle': {
+    //     if (isset($_GET['id'])) {
+    //       $productIdToDelete = $_GET['id']; // ID of the product you want to delete
 
-          foreach ($_SESSION['cart'] as $key => $item) {
-            if ($item[0] == $productIdToDelete) {
-              unset($_SESSION['cart'][$key]);
-              break; // Kết thúc vòng lặp sau khi tìm thấy và xoá sản phẩm
-            }
-          }
-          // (Tùy chọn) Cập nhật lại chỉ mục của mảng
-          $_SESSION['cart'] = array_values($_SESSION['cart']);
-        }
-        include("cart.php");
-        break;
-      }
+    //       foreach ($_SESSION['cart'] as $key => $item) {
+    //         if ($item[0] == $productIdToDelete) {
+    //           unset($_SESSION['cart'][$key]);
+    //           break; // End the loop after finding and deleting the product
+    //         }
+    //       }
+    //       // (Optional) Update the array index
+    //       $_SESSION['cart'] = array_values($_SESSION['cart']);
+    //     }
+    //     include("cart.php");
+    //     break;
+    //   }
     case 'detail_product': {
         if (isset($_GET['id']) && ($_GET['id'] != "")) {
           $id = $_GET['id'];
@@ -137,113 +138,113 @@ if (isset($_GET['act'])) {
         }
         break;
       }
-    case 'checkout': {
-        if (!isset($_SESSION['iduser'])) {
-          header('Location: fashionApp.php?act=login');
-          exit;
-        }
-        if (isset($_POST['total_prices']) && $_POST['total_prices'] != "") {
-          $total_prices = $_POST['total_prices'];
-          $id_user = $_SESSION['iduser'];
-          $user = get_user_checkout($id_user);
-          $lname = $user[0]['lname'];
-          $fname = $user[0]['fname'];
-          $address = $user[0]['address'];
-          $phone = $user[0]['phone'];
-          $email = $user[0]['email'];
-          $payment = $_POST['payment'];
-          $invoice_id = "KINGSMAN" . rand(0, 999999);
-          $iddh = create_order($invoice_id, $total_prices, $payment, $lname, $fname, $address, $email, $phone, $id_user);
-        }
-        // $item = array($id, $name, $img, $price, $quantity, $size);
-        if (isset($_SESSION['cart']) && (count($_SESSION['cart']) > 0)) {
-          foreach ($_SESSION['cart'] as $item) {
-            addtocart($iddh, $item[0], $item[1], $item[2], $item[3], $item[4], $item[5]);
-            $product_minus = get_detail_product($item[0]);
-            $quantity = $product_minus[0]['quantity'] - $item[4];
-            update_quantity_product($item[0], $quantity);
-          }
-        }
-        $more_order = getall_order();
-        $more_cart = getall_cart();
-        include("checkout.php");
-        break;
-      }
-    case 'check_out_update': {
-        if (isset($_POST['address']) && $_POST['address'] != "") {
-          $address = $_POST['address'];
-          $lname = $_POST['lname'];
-          $fname = $_POST['fname'];
-          $phone = $_POST['phone'];
-          $email = $_POST['email'];
-          $notes = $_POST['notes'];
-          $iddh = $_POST['iddh'];
-          update_checkout($address, $lname, $fname, $phone, $iddh, $email, $notes);
-          if (isset($_SESSION['cart'])) {
-            unset($_SESSION['cart']);
-          }
-          // header("location: invoice_print.php?id=".$iddh);
-          include("process_payment.php");
-        } elseif (isset($_GET['iddh']) && $_GET['iddh'] != "") {
-          $iddh = $_GET['iddh'];
-          // header("location: invoice_print.php?id=".$iddh);
-          include("process_payment.php");
-        }
-        break;
-      }
-    case 'add_cart': {
-        // Bring information from form
-        if (isset($_POST['img']) && isset($_POST['name']) && isset($_POST['price']) && isset($_POST['id']) && isset($_POST['id'])) {
-          $img = $_POST['img'];
-          $name = $_POST['name'];
-          $price = $_POST['price'];
-          $id = $_POST['id'];
-          $size = $_POST['size'];
-          if (isset($_POST['quantity']) && ($_POST['quantity'] > 0)) {
-            $quantity = $_POST['quantity'];
-          } else {
-            $quantity = 0;
-          }
-          // Check if the product is already in the cart
-          $itemExists = false;
-          $tempCart = array();
+    // case 'checkout': {
+    //     if (!isset($_SESSION['iduser'])) {
+    //       header('Location: fashionApp.php?act=login');
+    //       exit;
+    //     }
+    //     if (isset($_POST['total_prices']) && $_POST['total_prices'] != "") {
+    //       $total_prices = $_POST['total_prices'];
+    //       $id_user = $_SESSION['iduser'];
+    //       $user = get_user_checkout($id_user);
+    //       $lname = $user[0]['lname'];
+    //       $fname = $user[0]['fname'];
+    //       $address = $user[0]['address'];
+    //       $phone = $user[0]['phone'];
+    //       $email = $user[0]['email'];
+    //       $payment = $_POST['payment'];
+    //       $invoice_id = "KINGSMAN" . rand(0, 999999);
+    //       $iddh = create_order($invoice_id, $total_prices, $payment, $lname, $fname, $address, $email, $phone, $id_user);
+    //     }
+    //     // $item = array($id, $name, $img, $price, $quantity, $size);
+    //     if (isset($_SESSION['cart']) && (count($_SESSION['cart']) > 0)) {
+    //       foreach ($_SESSION['cart'] as $item) {
+    //         addtocart($iddh, $item[0], $item[1], $item[2], $item[3], $item[4], $item[5]);
+    //         $product_minus = get_detail_product($item[0]);
+    //         $quantity = $product_minus[0]['quantity'] - $item[4];
+    //         update_quantity_product($item[0], $quantity);
+    //       }
+    //     }
+    //     $more_order = getall_order();
+    //     $more_cart = getall_cart();
+    //     include("checkout.php");
+    //     break;
+    //   }
+    // case 'check_out_update': {
+    //     if (isset($_POST['address']) && $_POST['address'] != "") {
+    //       $address = $_POST['address'];
+    //       $lname = $_POST['lname'];
+    //       $fname = $_POST['fname'];
+    //       $phone = $_POST['phone'];
+    //       $email = $_POST['email'];
+    //       $notes = $_POST['notes'];
+    //       $iddh = $_POST['iddh'];
+    //       update_checkout($address, $lname, $fname, $phone, $iddh, $email, $notes);
+    //       if (isset($_SESSION['cart'])) {
+    //         unset($_SESSION['cart']);
+    //       }
+    //       // header("location: invoice_print.php?id=".$iddh);
+    //       include("process_payment.php");
+    //     } elseif (isset($_GET['iddh']) && $_GET['iddh'] != "") {
+    //       $iddh = $_GET['iddh'];
+    //       // header("location: invoice_print.php?id=".$iddh);
+    //       include("process_payment.php");
+    //     }
+    //     break;
+    //   }
+    // case 'add_cart': {
+    //     // Bring information from form
+    //     if (isset($_POST['img']) && isset($_POST['name']) && isset($_POST['price']) && isset($_POST['id']) && isset($_POST['id'])) {
+    //       $img = $_POST['img'];
+    //       $name = $_POST['name'];
+    //       $price = $_POST['price'];
+    //       $id = $_POST['id'];
+    //       $size = $_POST['size'];
+    //       if (isset($_POST['quantity']) && ($_POST['quantity'] > 0)) {
+    //         $quantity = $_POST['quantity'];
+    //       } else {
+    //         $quantity = 0;
+    //       }
+    //       // Check if the product is already in the cart
+    //       $itemExists = false;
+    //       $tempCart = array();
 
-          foreach ($_SESSION['cart'] as $item) {
-            if ($item[0] == $id) {
-              // If the product already exists, increase the quantity
-              $item[4] += $quantity;
-              $itemExists = true;
-            }
-            $tempCart[] = $item;
-          }
+    //       foreach ($_SESSION['cart'] as $item) {
+    //         if ($item[0] == $id) {
+    //           // If the product already exists, increase the quantity
+    //           $item[4] += $quantity;
+    //           $itemExists = true;
+    //         }
+    //         $tempCart[] = $item;
+    //       }
 
-          // If the product doesn't exist, add it to the cart
-          if (!$itemExists) {
-            $item = array($id, $name, $img, $price, $quantity, $size);
-            $tempCart[] = $item;
-          }
+    //       // If the product doesn't exist, add it to the cart
+    //       if (!$itemExists) {
+    //         $item = array($id, $name, $img, $price, $quantity, $size);
+    //         $tempCart[] = $item;
+    //       }
 
-          // Update the cart in the session
-          $_SESSION['cart'] = $tempCart;
-        }
-        include('cart.php');
-        // header('location: fashionApp.php');
-        break;
-      }
-    case 'print_invoice': {
-        if (isset($_GET['iddh']) && $_GET['iddh'] != "") {
-          $iddh = $_GET['iddh'];
-          header("location: invoice_print.php?id=" . $iddh);
-        }
-        break;
-      }
-    case 'print_invoice_admin': {
-        if (isset($_GET['iddh']) && $_GET['iddh'] != "") {
-          $iddh = $_GET['iddh'];
-          header("location: invoice_print_admin.php?id=" . $iddh);
-        }
-        break;
-      }
+    //       // Update the cart in the session
+    //       $_SESSION['cart'] = $tempCart;
+    //     }
+    //     include('cart.php');
+    //     // header('location: fashionApp.php');
+    //     break;
+    //   }
+    // case 'print_invoice': {
+    //     if (isset($_GET['iddh']) && $_GET['iddh'] != "") {
+    //       $iddh = $_GET['iddh'];
+    //       header("location: invoice_print.php?id=" . $iddh);
+    //     }
+    //     break;
+    //   }
+    // case 'print_invoice_admin': {
+    //     if (isset($_GET['iddh']) && $_GET['iddh'] != "") {
+    //       $iddh = $_GET['iddh'];
+    //       header("location: invoice_print_admin.php?id=" . $iddh);
+    //     }
+    //     break;
+    //   }
     // insert account client user
     case 'insert_client_user': {
         if (isset($_GET['id'])) {

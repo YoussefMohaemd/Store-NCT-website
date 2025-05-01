@@ -169,6 +169,4 @@
         </div>
     </div>
     </div>
-    </div>
-    </div>
     <!-- End Expolre Product Area  -->
