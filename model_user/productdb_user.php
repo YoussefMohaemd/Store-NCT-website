@@ -1,3 +1,4 @@
+<!-- productdb_user.php -->
 <?php
 function getall_product(){
     $conn=connectdb();
@@ -7,50 +8,20 @@ function getall_product(){
     $kq=$stmt->fetchAll();
     return $kq;
 }
-
-// function search_product($query){
-//     $conn=connectdb();
-//     $stmt = $conn->prepare("SELECT * FROM tbl_product WHERE product_name LIKE '%$query%' OR description LIKE '%$query%' OR product_prices LIKE '%$query% ");
-//     $stmt->execute();
-//     $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
-//     $kq=$stmt->fetchAll();
-//     return $kq;
-// }
-
-function search_product($query) {
+function getall_product_hot() {
     $conn = connectdb();
-    $stmt = $conn->prepare("SELECT * FROM tbl_product WHERE product_name LIKE :query OR description LIKE :query OR product_prices LIKE :query");
-    $stmt->bindParam(':query', $queryParam, PDO::PARAM_STR);
-    $queryParam = '%' . $query . '%';
+    $stmt = $conn->prepare("SELECT * FROM tbl_product WHERE special = '1' AND view = '1'");
     $stmt->execute();
     $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
     return $result;
 }
-
-
-function update_quantity_product($id,$quantity){
-    $conn=connectdb();
-    $sql = "UPDATE tbl_product SET quantity='".$quantity."' WHERE id_product=".$id;
-    $stmt = $conn->prepare($sql);
+function getall_product_new() {
+    $conn = connectdb();
+    $stmt = $conn->prepare("SELECT * FROM tbl_product WHERE view = '1' ORDER BY id_product DESC LIMIT 8");
     $stmt->execute();
+    $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    return $result;
 }
-
-function getall_product_hot(){
-    $conn=connectdb();
-    $stmt = $conn->prepare("SELECT * FROM tbl_product WHERE special ='1'");
-    $stmt->execute();
-    $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
-    $kq=$stmt->fetchAll();
-    return $kq;
-}
-// function getall_product_new(){
-//     $conn=connectdb();
-//     $stmt = $conn->prepare("SELECT * FROM tbl_product ORDER BY id_product DESC");
-//     $stmt->execute();
-//     $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
-//     $kq=$stmt->fetchAll();
-//     return $kq;
-// }
 function get_detail_product($id){
     $conn=connectdb();
     $stmt = $conn->prepare("SELECT * FROM tbl_product Where id_product =".$id);

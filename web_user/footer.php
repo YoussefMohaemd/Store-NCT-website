@@ -51,36 +51,25 @@
 </div>
 
 <footer class="axil-footer-area footer-style-1 footer-light">
-    <!-- Start Footer Top Area  -->
-    <!-- Start Footer Area  -->
+
     <footer class="axil-footer-area footer-style-2">
-        <!-- Start Footer Top Area  -->
         <div class="footer-top separator-top">
             <div class="container">
                 <div class="row">
-                    <!-- Start Single Widget  -->
                     <div class="col-lg-4 col-sm-6">
                         <div class="axil-footer-widget">
                             <h5 class="widget-title">Address</h5>
-                            <!-- <div class="logo mb--30">
-                            <a href="index.html">
-                                <img class="light-logo" src="../assets//images/logo/logo.png" alt="Logo Images">
-                            </a>
-                        </div> -->
                             <div class="inner">
                                 <p>Maaidi str., <br>
                                     str.9 maadi , <br>
                                 </p>
                                 <ul class="support-list-item">
                                     <li><a href="nourmamdouh54@gmail.com"><i
-                                                class="fal fa-envelope-open"></i>nourmamdouh54@gmail.com</a></li>
-                                    <!-- <li><i class="fal fa-map-marker-alt"></i> 685 Market Street,  <br> Las Vegas, LA 95820, <br> United States.</li> -->
+                                                class="fas fa-envelope-open"></i>nourmamdouh54@gmail.com</a></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
-                    <!-- End Single Widget  -->
-                    <!-- Start Single Widget  -->
                     <div class="col-lg-4 col-sm-6">
                         <div class="axil-footer-widget">
                             <h5 class="widget-title">Account</h5>
@@ -94,8 +83,6 @@
                             </div>
                         </div>
                     </div>
-                    <!-- End Single Widget  -->
-                    <!-- Start Single Widget  -->
                     <div class="col-lg-4 col-sm-6">
                         <div class="axil-footer-widget">
                             <h5 class="widget-title">Quick Link</h5>
@@ -109,15 +96,9 @@
                             </div>
                         </div>
                     </div>
-                    <!-- End Single Widget  -->
-                    <!-- Start Single Widget  -->
-                
-                    <!-- End Single Widget  -->
                 </div>
             </div>
         </div>
-        <!-- End Footer Top Area  -->
-        <!-- Start Copyright Area  -->
         <div class="copyright-area copyright-default separator-top">
             <div class="container">
                 <div class="row align-items-center">
@@ -151,27 +132,12 @@
                 </div>
             </div>
         </div>
-        <!-- End Copyright Area  -->
     </footer>
 
-    <!-- Modernizer JS -->
-    <script src="../assets/js/vendor/modernizr.min.js"></script>
-    <!-- jQuery JS -->
     <script src="../assets/js/vendor/jquery.js"></script>
-    <!-- Bootstrap JS -->
-    <script src="../assets/js/vendor/popper.min.js"></script>
-    <script src="../assets/js/vendor/bootstrap.min.js"></script>
     <script src="../assets/js/vendor/slick.min.js"></script>
     <script src="../assets/js/vendor/js.cookie.js"></script>
-    <!-- <script src="../assets/js/vendor/jquery.style.switcher.js"></script> -->
     <script src="../assets/js/vendor/jquery-ui.min.js"></script>
-    <script src="../assets/js/vendor/jquery.countdown.min.js"></script>
     <script src="../assets/js/vendor/sal.js"></script>
     <script src="../assets/js/vendor/jquery.magnific-popup.min.js"></script>
-    <script src="../assets/js/vendor/imagesloaded.pkgd.min.js"></script>
-    <script src="../assets/js/vendor/isotope.pkgd.min.js"></script>
-    <script src="../assets/js/vendor/counterup.js"></script>
-    <script src="../assets/js/vendor/waypoints.min.js"></script>
-
-    <!-- Main JS -->
     <script src="../assets/js/main.js"></script>

@@ -1,9 +1,8 @@
 <?php
-    include 'head.php';
+include 'head.php';
 ?>
 <div class="axil-signin-area">
 
-    <!-- Start Header -->
     <div class="signin-header">
         <div class="row align-items-center">
             <div class="col-sm-4">
@@ -18,10 +17,8 @@
             </div>
         </div>
     </div>
-    <!-- End Header -->
 
-    <div class="row" style="text-align: center; justify-content: center;
-">
+    <div class="row" style="text-align: center; justify-content: center;">
         <div class="col-lg-6 offset-xl-2">
             <div class="axil-signin-form-wrap">
                 <div class="axil-signin-form">
@@ -40,10 +37,10 @@
                         <?php
                         if (isset($_GET['error']) && $_GET['error'] === '1') {
                             echo '<font color="red">Username, Password wrong or account doesn\'t exist!</font><br><br>';
-                        } elseif(isset($_GET['error']) && $_GET['error'] === '2'){
+                        } elseif (isset($_GET['error']) && $_GET['error'] === '2') {
                             echo '<font color="red">Your account has been locked</font><br><br>';
                         }
-                    ?>
+                        ?>
 
                         <input class="ui blue button" type="submit" name="user_check" value="Login">
                     </form>
@@ -52,8 +49,3 @@
         </div>
     </div>
 </div>
-<script type="text/javascript">
-if (window.location.search.includes('success=1')) {
-    alert('Insert Client successed!');
-}
-</script>

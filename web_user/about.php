@@ -129,5 +129,7 @@
             </div>
         </div>
     </div>
+
+
     <!-- End Privacy Policy Area  -->
 </main>
