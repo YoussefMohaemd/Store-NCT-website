@@ -154,13 +154,11 @@ function submitForm(formIndex) {
 }
 
 //     function highlightSize(element) {
-//   // Xóa class 'highlighted' từ tất cả các phần tử
 //     var sizeElements = document.querySelectorAll('.range-variant li');
 //     sizeElements.forEach(function(el) {
 //         el.classList.remove('highlighted');
 //     });
 
-//     // Thêm class 'highlighted' vào phần tử được click
 //     element.classList.add('highlighted');
 //     }
   </script>
@@ -182,12 +180,12 @@ function limitInput(input) {
 function highlightSize(element) {
     var sizeItems = document.getElementsByTagName("li");
 
-    // Xóa lớp "active" cho tất cả các phần tử <li>
+    // Remove the "active" class from all <li> elements
     for (var i = 0; i < sizeItems.length; i++) {
         sizeItems[i].classList.remove("active");
     }
 
-    // Thêm lớp "active" cho phần tử được nhấp
+    // Add "active" class to clicked element
     element.classList.add("active");
 }
   </script>

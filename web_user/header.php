@@ -2,7 +2,7 @@
 <script>
 $(document).ready(function() {
     $("#searchInput").keyup(function() {
-        var query = $(this).val(); // Lấy từ khóa tìm kiếm từ input
+        var query = $(this).val(); // Get search keywords from input
         $.ajax({
             type: "POST",
             url: "test_search.php",
@@ -19,7 +19,7 @@ $(document).ready(function() {
 
 <body class="sticky-header">
     <a href="#top" class="back-to-top" id="backto-top"><i class="fal fa-arrow-up"></i></a>
-    <!-- Start Mainmenu Area  -->
+    <!-- Start Main menu Area  -->
     <div id="axil-sticky-placeholder"></div>
     <div class="axil-mainmenu">
         <div class="container">
@@ -31,7 +31,7 @@ $(document).ready(function() {
                     </a>
                 </div>
                 <div class="header-main-nav">
-                    <!-- Start Mainmanu Nav -->
+                    <!-- Start Main menu Nav -->
                     <nav class="mainmenu-nav">
                         <button class="mobile-close-btn mobile-nav-toggler">
                             <i class="fas fa-times"></i>
@@ -56,10 +56,6 @@ $(document).ready(function() {
                 </div>
                 <div class="header-action">
                     <ul class="action-list">
-                        
-                       
-
-
                         <li class="my-account">
                             <a href="javascript:void(0)">
                                 <i class="flaticon-person"></i>
@@ -97,8 +93,7 @@ $(document).ready(function() {
             </div>
         </div>
     </div>
-    <!-- End Mainmenu Area -->
+    <!-- End Main menu Area -->
     </header>
 </body>
-
 </html>

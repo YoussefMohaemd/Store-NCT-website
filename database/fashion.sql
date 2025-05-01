@@ -13,16 +13,16 @@ START TRANSACTION;
 SET time_zone = "+00:00";
 
 
-CREATE TABLE `tbl_cart` (
-  `id` int(9) NOT NULL,
-  `id_order` int(9) NOT NULL,
-  `id_pro` int(9) NOT NULL,
-  `quantity` int(9) NOT NULL DEFAULT 0,
-  `prices` double(10,2) NOT NULL DEFAULT 0.00,
-  `size` varchar(5) NOT NULL,
-  `name_pro` varchar(50) DEFAULT NULL,
-  `img_pro` varchar(100) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+-- CREATE TABLE `tbl_cart` (
+--   `id` int(9) NOT NULL,
+--   `id_order` int(9) NOT NULL,
+--   `id_pro` int(9) NOT NULL,
+--   `quantity` int(9) NOT NULL DEFAULT 0,
+--   `prices` double(10,2) NOT NULL DEFAULT 0.00,
+--   `size` varchar(5) NOT NULL,
+--   `name_pro` varchar(50) DEFAULT NULL,
+--   `img_pro` varchar(100) DEFAULT NULL
+-- ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 
 
@@ -56,22 +56,22 @@ CREATE TABLE `tbl_client` (
 
 
 
-CREATE TABLE `tbl_order` (
-  `id` int(9) NOT NULL,
-  `invoice_id` varchar(20) NOT NULL,
-  `total_prices` double(10,0) NOT NULL DEFAULT 0,
-  `payment` tinyint(1) NOT NULL DEFAULT 1,
-  `id_user` int(11) NOT NULL,
-  `fname` varchar(20) NOT NULL,
-  `lname` varchar(20) NOT NULL,
-  `phone` varchar(20) NOT NULL,
-  `email` varchar(50) NOT NULL,
-  `address` varchar(255) NOT NULL,
-  `notes` varchar(255) NOT NULL DEFAULT 'Not note',
-  `due_date` date NOT NULL DEFAULT current_timestamp(),
-  `status` varchar(20) NOT NULL DEFAULT 'Pending',
-  `employee_pr` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+-- CREATE TABLE `tbl_order` (
+--   `id` int(9) NOT NULL,
+--   `invoice_id` varchar(20) NOT NULL,
+--   `total_prices` double(10,0) NOT NULL DEFAULT 0,
+--   `payment` tinyint(1) NOT NULL DEFAULT 1,
+--   `id_user` int(11) NOT NULL,
+--   `fname` varchar(20) NOT NULL,
+--   `lname` varchar(20) NOT NULL,
+--   `phone` varchar(20) NOT NULL,
+--   `email` varchar(50) NOT NULL,
+--   `address` varchar(255) NOT NULL,
+--   `notes` varchar(255) NOT NULL DEFAULT 'Not note',
+--   `due_date` date NOT NULL DEFAULT current_timestamp(),
+--   `status` varchar(20) NOT NULL DEFAULT 'Pending',
+--   `employee_pr` int(11) DEFAULT NULL
+-- ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 
 
@@ -107,10 +107,10 @@ INSERT INTO `tbl_product` (`id_product`, `product_name`, `quantity`, `product_im
 (97, 'Break Vest', 123, 'suit (4).png', 2700, 94, 1, '2023-06-08', 16, 1, 1, 2700, 'A waistcoat has a full vertical opening in the front, which fastens with buttons or snaps. Both single-breasted and double-breasted waistcoats exist, regardless of the formality of dress, but single-breasted ones are more common. In a three piece suit, th', 'XXXL');
 
 
-ALTER TABLE `tbl_cart`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `FK_order` (`id_order`),
-  ADD KEY `FK_product` (`id_pro`);
+-- ALTER TABLE `tbl_cart`
+--   ADD PRIMARY KEY (`id`),
+--   ADD KEY `FK_order` (`id_order`),
+--   ADD KEY `FK_product` (`id_pro`);
 
 
 
@@ -124,10 +124,10 @@ ALTER TABLE `tbl_client`
 
 
 
-ALTER TABLE `tbl_order`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `FK_employee` (`employee_pr`),
-  ADD KEY `FK_client_check` (`id_user`);
+-- ALTER TABLE `tbl_order`
+--   ADD PRIMARY KEY (`id`),
+--   ADD KEY `FK_employee` (`employee_pr`),
+--   ADD KEY `FK_client_check` (`id_user`);
 
 
 ALTER TABLE `tbl_product`
@@ -138,8 +138,8 @@ ALTER TABLE `tbl_product`
 
 
 
-ALTER TABLE `tbl_cart`
-  MODIFY `id` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=207;
+-- ALTER TABLE `tbl_cart`
+--   MODIFY `id` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=207;
 
 
 ALTER TABLE `tbl_catalog`
@@ -151,8 +151,8 @@ ALTER TABLE `tbl_client`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
 
 
-ALTER TABLE `tbl_order`
-  MODIFY `id` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=146;
+-- ALTER TABLE `tbl_order`
+--   MODIFY `id` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=146;
 
 
 
@@ -162,15 +162,15 @@ ALTER TABLE `tbl_product`
 
 
 
-ALTER TABLE `tbl_cart`
-  ADD CONSTRAINT `FK_order` FOREIGN KEY (`id_order`) REFERENCES `tbl_order` (`id`),
-  ADD CONSTRAINT `FK_product` FOREIGN KEY (`id_pro`) REFERENCES `tbl_product` (`id_product`);
+-- ALTER TABLE `tbl_cart`
+--   ADD CONSTRAINT `FK_order` FOREIGN KEY (`id_order`) REFERENCES `tbl_order` (`id`),
+--   ADD CONSTRAINT `FK_product` FOREIGN KEY (`id_pro`) REFERENCES `tbl_product` (`id_product`);
 
 
 
-ALTER TABLE `tbl_order`
-  ADD CONSTRAINT `FK_client_check` FOREIGN KEY (`id_user`) REFERENCES `tbl_client` (`ID`),
-  ADD CONSTRAINT `FK_employee` FOREIGN KEY (`employee_pr`) REFERENCES `tbl_user` (`id`);
+-- ALTER TABLE `tbl_order`
+--   ADD CONSTRAINT `FK_client_check` FOREIGN KEY (`id_user`) REFERENCES `tbl_client` (`ID`),
+--   ADD CONSTRAINT `FK_employee` FOREIGN KEY (`employee_pr`) REFERENCES `tbl_user` (`id`);
 
 
 
@@ -179,5 +179,3 @@ ALTER TABLE `tbl_product`
   ADD CONSTRAINT `fk_product_catalog` FOREIGN KEY (`catalog_id`) REFERENCES `tbl_catalog` (`id_catalog_k`),
   ADD CONSTRAINT `fk_supplier` FOREIGN KEY (`sup_id`) REFERENCES `tbl_supplier` (`sup_id`);
 COMMIT;
-
-]
